@@ -1,7 +1,7 @@
 from urllib import request
 from venv import create
 from django.shortcuts import render
-from django.http import JsonResponse
+from django.http import HttpResponse, JsonResponse
 import json
 import datetime
 from .models import *
@@ -105,3 +105,6 @@ def det_view(request,id):
 
 	context = {'items':items, 'order':order, 'cartItems':cartItems, 'product':product}
 	return render(request,'det_view.html',context)
+
+def about(request):
+	return render(request,'about.html')

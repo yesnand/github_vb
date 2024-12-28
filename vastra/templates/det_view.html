@@ -1,19 +1,8 @@
 {% extends 'main.html' %}
 {% block content%}
-<style> 
-    .col-12{
-        border:10px;
-        height:50px;
-        width:800px;
-        border-color:green;
-        border-width:2px;
-        border-style:solid;        
-    }
-</style>
 
-<img style="border-color:green;border-width:2px;border-style:solid;" src="{{product.imageURL}}" class="img-fluid" alt="No Image" width="800" height="800" >
-<hr>
-<div class="col-12">
-    <strong>{{product.detail}}</strong>
+<img src="{{product.imageURL}}" class="mx-auto d-block" alt="No Image" width="300" height="400" >
+<div class="container p-5 my-5 bg-primary text-white">
+    <p>{{product.detail}}</p>
 </div>
 {% endblock content%}
